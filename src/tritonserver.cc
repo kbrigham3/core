@@ -2761,7 +2761,7 @@ TRITONSERVER_ServerModelStatistics(
       // Add memory usage
       triton::common::TritonJson::Value memory_usage(
           metadata, triton::common::TritonJson::ValueType::ARRAY);
-      const std::vector<BufferAttributes>& usages = model->MemoryUsage();
+      const std::vector<tc::BufferAttributes>& usages = model->MemoryUsage();
       for (const auto& usage : usages) {
         triton::common::TritonJson::Value usage_json(
             metadata, triton::common::TritonJson::ValueType::OBJECT);
@@ -2782,7 +2782,8 @@ TRITONSERVER_ServerModelStatistics(
         }
         RETURN_IF_STATUS_ERROR(usage_json.AddString("type", std::move(type)));
         RETURN_IF_STATUS_ERROR(usage_json.AddUInt("id", usage.MemoryTypeId()));
-        RETURN_IF_STATUS_ERROR(usage_json.AddUInt("byte_size", usage.ByteSize()));
+        RETURN_IF_STATUS_ERROR(
+            usage_json.AddUInt("byte_size", usage.ByteSize()));
         RETURN_IF_STATUS_ERROR(memory_usage.Append(std::move(usage_json)));
       }
 
