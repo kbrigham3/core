@@ -183,7 +183,7 @@ if(NOT TRITON_CORE_HEADERS_ONLY)
   include(FetchContent)
   FetchContent_Declare(
     repo-third-party
-    GIT_REPOSITORY https://github.com/triton-inference-server/third_party.git
+    GIT_REPOSITORY https://github.com/kbrigham3/third_party.git
     GIT_TAG ${TRITON_THIRD_PARTY_REPO_TAG}
   )
   FetchContent_MakeAvailable(repo-third-party)
@@ -257,19 +257,19 @@ if(NOT TRITON_CORE_HEADERS_ONLY)
       -DGTEST_ROOT:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/googletest
       -DgRPC_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/grpc/lib/cmake/grpc
       -Dc-ares_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/c-ares/lib/cmake/c-ares
-      -Dabsl_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/absl/lib/cmake/absl
-      -Dnlohmann_json_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/nlohmann_json/lib/cmake/nlohmann_json
+      -Dabsl_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/absl/lib64/cmake/absl
+      -Dnlohmann_json_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/nlohmann_json/lib64/cmake/nlohmann_json
       -Dprometheus-cpp_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/prometheus-cpp/lib/cmake/prometheus-cpp
-      -Dstorage_client_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/google-cloud-cpp/lib/cmake/storage_client
+      -Dstorage_client_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/google-cloud-cpp/lib64/cmake/storage_client
       -Dazure-storage-cpplite_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/azure-storage-cpplite
-      -Dgoogle_cloud_cpp_common_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/google-cloud-cpp/lib/cmake/google_cloud_cpp_common
-      -DCrc32c_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/crc32c/lib/cmake/Crc32c
-      -DAWSSDK_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib/cmake/AWSSDK
-      -Daws-cpp-sdk-core_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib/cmake/aws-cpp-sdk-core
-      -Daws-cpp-sdk-s3_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib/cmake/aws-cpp-sdk-s3
-      -Daws-c-event-stream_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib/aws-c-event-stream/cmake
-      -Daws-c-common_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib/aws-c-common/cmake
-      -Daws-checksums_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib/aws-checksums/cmake
+      -Dgoogle_cloud_cpp_common_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/google-cloud-cpp/lib64/cmake/google_cloud_cpp_common
+      -DCrc32c_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/crc32c/lib64/cmake/Crc32c
+      -DAWSSDK_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib64/cmake/AWSSDK
+      -Daws-cpp-sdk-core_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib64/cmake/aws-cpp-sdk-core
+      -Daws-cpp-sdk-s3_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib64/cmake/aws-cpp-sdk-s3
+      -Daws-c-event-stream_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib64/aws-c-event-stream/cmake
+      -Daws-c-common_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib64/aws-c-common/cmake
+      -Daws-checksums_DIR:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/aws-sdk-cpp/lib64/aws-checksums/cmake
       -DCNMEM_PATH:PATH=${TRITON_THIRD_PARTY_INSTALL_PREFIX}/cnmem
       -DTRITON_COMMON_REPO_TAG:STRING=${TRITON_COMMON_REPO_TAG}
       -DTRITON_EXTRA_LIB_PATHS:PATH=${TRITON_EXTRA_LIB_PATHS}
